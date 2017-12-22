@@ -17,6 +17,9 @@ $(document).ready(function(){
 &#x3C;/script&#x3E;
 </pre>
 
+Dataloader</br>
+![#1589F0](https://placehold.it/15/006587/000000?text=+) ![#1589F0](https://placehold.it/15/006587/000000?text=+) ![#1589F0](https://placehold.it/15/006587/000000?text=+)
+
 <b>Note:</b> While calling dataloader before ajax request will automatically close the loader after the ajax response.
 
 <b>Some properties for dataloader</b>
@@ -36,7 +39,7 @@ $(document).ready(function(){
 </tr>
 <tr>
 <td><b>size</b></td>
-<td>size attribute specifies the number of dataloader boxes to be displayed.</td>
+<td>size attribute specifies the number of dataloader boxes to be displayed. The default size is 3.</td>
 </tr>
 </tbody>
 </table>
