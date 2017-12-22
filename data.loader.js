@@ -1,27 +1,22 @@
 /**
- * © COPYRIGHT
- * @author VISHNU
+ * https://github.com/rvprasath/dataloader
+ * © COPYRIGHT 2017-2018 dataloader v1.0
+ * Licensed under the MIT license
+ * @author vishnu prasath
  */
 
-/*
- * Data loader for displaying loader while request server
- */
 (function($) {
 
 	$.fn.loader = function(options) {
 
 		var settings = $.extend({}, $.fn.loader.defaults, options);
 
-		/*---------Get the class or id of the element--------*/
+		
 		var element = $(this);
-
-		/*---------Calling the funtion to create svg element to display loader--------*/
 		var loader = createElement(settings);
 
 		return $(this).each(function() {
-			/*----------Displaying the loader-------*/
 			$(this).show().append(loader);
-			/*------------Remove the svg element or loader after ajax request is done------------*/
 			$(document).ajaxStop(function() {
 				$(element).find('#data-loader').remove();
 			});
@@ -32,17 +27,13 @@
 
 function createElement(settings) {
 
-	/*----------Display default value-----------*/
 	var color = '#006587';
 	var size = 3;
 
-	/*------------Array to create number of object for rectangle's cordinate-------------*/
-	var property = []
-	/*---------Svg element alignment-----------*/
+	var property = [];
 	var viewPortDefault = 50;
 	var viewBoxAlignCenter;
 
-	/*-----------Setting the optional properties if assigned-----------*/
 	if (settings.color != undefined) {
 		color = settings.color;
 	}
@@ -57,7 +48,6 @@ function createElement(settings) {
 	var xCordinateRef = 150;
 	var beginIncrementRef = 0.1;
 
-	/*---------Creating the object for coordinates----------*/
 	for (var i = 0; i < size; i++) {
 
 		var obj = {};
@@ -71,7 +61,6 @@ function createElement(settings) {
 		property.push(obj);
 	}
 
-	/*----------Creating the svg element-----------*/
 	var svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
 	svg.setAttribute('version', '1.1');
 	svg.setAttribute('id', 'data-loader');
@@ -86,7 +75,6 @@ function createElement(settings) {
 
 	for (var i = 0; i < property.length; i++) {
 
-		/*----------Creating the rect element----------*/
 		var rect = document.createElementNS('http://www.w3.org/2000/svg',
 				'rect');
 
@@ -96,7 +84,6 @@ function createElement(settings) {
 		rect.setAttribute('x', property[i].x);
 		rect.setAttribute('y', property[i].y);
 		
-		/*---------------Create the animate element------------------*/
 		var animate = document.createElementNS('http://www.w3.org/2000/svg',
 				'animate');
 		animate.setAttribute('attributeName', 'opacity');
