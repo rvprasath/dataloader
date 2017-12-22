@@ -32,8 +32,7 @@ $(document).ready(function(){
 <tr>
 <td><b>color</b></td>
 <td>color attribute defines the color for the data loader.The default color is <b>#006587</b>
-- ![#1589F0](https://placehold.it/15/006587/000000?text=+)
-<span style='width: 5px; height: 5px; background: '#006587";'>t</span></td>
+</td>
 </tr>
 <tr>
 <td><b>size</b></td>
