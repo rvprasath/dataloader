@@ -20,7 +20,7 @@ $(document).ready(function(){
 Dataloader</br>
 ![#1589F0](https://placehold.it/15/006587/000000?text=+) ![#1589F0](https://placehold.it/15/006587/000000?text=+) ![#1589F0](https://placehold.it/15/006587/000000?text=+)
 
-<b>Note:</b> While calling dataloader before ajax request will automatically close the loader after the ajax response.
+<b>Note:</b> While calling dataloader before ajax request, will automatically close the loader once after the ajax response complete.
 
 <b>Some properties for dataloader</b>
 
